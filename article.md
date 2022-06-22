@@ -17,7 +17,7 @@ header-includes: |
     \hypersetup{pdftex,
             pdfauthor={Mouhamed KONTE},
             pdftitle={Typage en python},
-            pdfsubject={Introduction to Python programming},
+            pdfsubject={Python : Type Hint},
             pdfkeywords={Python, Programming,tpye hint,hint,type,typage},
             pdfproducer={Emacs, Pandoc, Latex, Markdown},
             pdfcreator={Emacs, Pandoc, Latex, Markdown}}
@@ -47,6 +47,61 @@ Python supporte des annotations de type (ou type hints) optionnelles.
 Ces annotations de type constituent une syntaxe spéciale qui permet de déclarer le type d'une variable.
 
 En déclarant les types de vos variables, cela permet aux différents outils comme les éditeurs de texte d'offrir un meilleur support.
+
+## La syntaxe
+Prenons un exemple simple :
+```python
+def get_full_name(first_name, last_name):
+    full_name = first_name.title() + " " + last_name.title()
+    return full_name
+
+print(get_full_name("Amadou", "Ndiaye"))
+```
+Exécuter ce programe affiche :
+```python
+Amadou Ndiaye
+```
+
+Modifions une seule ligne de la version précédente.
+
+Nous allons changer seulement cet extrait, les paramètres de la fonction, de :
+Exécuter ce programe affiche :
+```python
+first_name, last_name
+```
+à :
+```python
+first_name: str, last_name: str
+```
+Ce sont des annotations de types :
+```python
+def get_full_name(first_name: str, last_name: str):
+    full_name = first_name.title() + " " + last_name.title()
+    return full_name
+
+print(get_full_name("Fatou", "Thiva"))
+
+# Affichage
+Fatou Thiva
+```
+Le typage se fait grâce aux annotations. Elles permettent d’associer un type donné (`List, bool, etc`) aux arguments et aux retours des fonctions.
+
+Les types primitifs sont les plus récurrents et utilisés : `bool, int, str, float`. Il peuvent être utilisés pour typer les arguments ainsi que les retours des fonctions.
+
+Prenons un autre exemple, une fonction qui prend en entrée un parèmetre de type `float`et la réponse est de type `float`:
+```python
+import math
+
+def circle_surface(radius: float) -> float:
+    return 3.141516 * math.sqrt(radius)
+
+circle = circle_surface(3.65)
+
+print(circle) //6.001857890739701
+```
+Dans l’exemple ci-dessus, la fonction `circle_surface` prend en argument le rayon du cercle (le `radius`) et calcule la surface de ce cercle. Cet argument est de type `float` (indiqué après le `:` suivant le nom de l’argument) et la réponse est elle aussi de type `float` (le type de retour est indiqué après la flèche `->`).
+
+
 
 - first time
 * salut
