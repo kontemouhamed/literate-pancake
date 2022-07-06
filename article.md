@@ -26,7 +26,7 @@ header-includes: |
 
 # <center>Python : Type Hint</center>
 <p align="center">
-  <img width="" height="" src="https://njqdev.gallerycdn.vsassets.io/extensions/njqdev/vscode-python-typehint/1.4.1/1603040363664/Microsoft.VisualStudio.Services.Icons.Default">
+  <img width="" height="" src="img/python.png">
 </p>
 
 # <center>Table des matières</center>
@@ -43,17 +43,16 @@ header-includes: |
 
 <div style="page-break-after: always"></div>
 
-# <center>Introduction</center>
+# Introduction
 Python est un langage de programmation puissant et facile à apprendre. Il dispose de structures de données de haut niveau et permet une approche simple mais efficace de la programmation orientée objet. Parce que sa syntaxe est élégante, que son typage est dynamique et qu'il est interprété. Python est un langage idéal pour l'écriture de scripts et le développement rapide d'applications dans de nombreux domaines et sur la plupart des plateformes.
 
 L'interpréteur Python et sa vaste bibliothèque standard sont disponibles librement, sous forme de sources ou de binaires, pour toutes les plateformes majeures depuis le site Internet https://www.python.org/ et peuvent être librement redistribués. 
 
-# <center>Type Hints in Python</center>
+# Type Hints in Python
+
 L’un des points positifs du langage est le gain en productivité pendant le développement d’applications web par rapport à d’autres langages à typage statique comme Java ou C++. Par conséquent, un gain de temps précieux pour les entreprises qui font de plus en plus le choix de Python.
 
 Paradoxalement, la simplicité de Python peut devenir problématique. Les applications sont plus rapidement en production mais elles peuvent également contenir plus de bugs. L’une des critiques souvent évoquées sur Python est son typage dynamique. En effet, le type de variables est assigné lors de la déclaration et il peut être modifié pendant l’interprétation du code. Pour pallier cette problématique, Python 3.5 a introduit le « type hinting » (PEP484: Type Hints).
-
-<!-- Python est un langage à typage dynamique, ce qui signifie que vous n'avez jamais à indiquer explicitement le type de type de variable. Mais dans certains cas, le typage dynamique peut entraîner des bogues très difficiles à déboguer et dans ces cas, les conseils de type ou le typage statique peuvent être pratiques. -->
 
 Python supporte des annotations de type (ou type hints) optionnelles.
 
@@ -154,7 +153,7 @@ if __name__ == '__main__':
 
 La fonction accepte l'entier et le met au carré, au moins selon les indications de type. Lors de l'exécution, la fonction est évaluée à la fois avec un entier et un flottant.
 
-Pour exécuter le code maintenant, nous devons simplement appeler l'interpréteur Python et nous devons spécifier "`-m`" pour indiquer que nous voulons charger un module, puis spécifier le script que nous voulons vérifier. 
+Pour exécuter le code maintenant, nous devons simplement appeler l'interpréteur Python et nous devons spécifier "`-m`" pour indiquer que nous voulons charger un module, puis spécifier le script que nous voulons vérifier.
 Par exemple: `python -m mypy type_hint.py`
 
 
@@ -258,6 +257,6 @@ Facebook a développé `Pyre`. L'un de ses objectifs déclarés est d'être rapi
 
 De plus, Google a créé `Pytype`. Ce vérificateur de type fonctionne également de la même manière que Mypy. En plus de vérifier le code annoté, `Pytype` prend en charge l'exécution de vérifications de type sur du code non annoté et même l'ajout automatique d'annotations au code.
 
-# <center>Conclusion</center>
+# Conclusion
 Le type hint ou annotation de type en Python est une fonctionnalité très utile dont vous pouvez vous passer sans problème. Les annotations de type ne vous rendent pas capable d'écrire du code que vous ne pouvez pas écrire sans utiliser les indications de type. Au lieu de cela,il vous permet de raisonner plus facilement sur le code, de trouver des bogues subtils et de maintenir une architecture propre.
 
